@@ -7,5 +7,9 @@ Route::get('/', function () {
     return view('acciones');
 });
 
+Route::get('/saludo', function () {
+    return 'hola';
+});
+
 
 
