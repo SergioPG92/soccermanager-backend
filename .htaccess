@@ -1,0 +1,12 @@
+
+
+<IfModule mod_headers.c>
+    SetEnvIf Origin "http://dev.proyecto-coach.es" ORIGIN_OK
+    SetEnvIf Origin "http://proyecto-coach.es" ORIGIN_OK
+    Header set Access-Control-Allow-Origin "%{HTTP_ORIGIN}e" env=ORIGIN_OK
+    Header set Access-Control-Allow-Methods "GET, POST, OPTIONS, PUT, DELETE"
+    Header set Access-Control-Allow-Headers "Origin, X-Requested-With, Content-Type, Accept, Authorization"
+    Header set Access-Control-Allow-Credentials "true"
+    Header set Access-Control-Max-Age 1000
+</IfModule>
+
